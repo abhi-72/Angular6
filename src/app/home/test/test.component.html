@@ -1,0 +1,46 @@
+<div>
+  <h2 [class.text-danger]="iserror">{{greetUser()}}</h2>
+  <h2 [ngClass]="messageclass">{{clsBind()}}</h2>
+  <h2 [style.color]= "iserror ? 'red' : highlightColor">{{styleBind(1)}}</h2>
+  <h2 [ngStyle]= "iserror ? 'red' : titleStyles">{{styleBind(2)}}</h2>
+  <button (click)="onClick($event)">EB1</button>
+  <button (click)="greet ='Event Binding-2'">EB2</button>{{greet}}<br><br>
+  <input #tr type="text" value="Template Reference">
+  <button (click)="onClick2(tr.value)">TR</button><br><br>
+  <input type="text" [(ngModel)]="twoWayBind" ng-init="twoWayBind">{{twoWayBind}}<br><br>
+  <input [disabled]="isdisabled" id="{{myId}}" type="text" value= "Property Binding">
+  <!-- <span *ngIf="isdisabled; else elseBlock">Disabled</span> -->
+  <span *ngIf="isdisabled; then thenBlock; else elseBlock"></span>
+  <ng-template #thenBlock>
+    <span> Disabled</span>
+  </ng-template>
+  <ng-template #elseBlock>
+    <span> Visible</span>
+  </ng-template>
+  <div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'">You Picked Red color</p>
+    <p *ngSwitchDefault>Pick again</p>
+  </div>
+  <div *ngFor="let color of colors; index as i; first as f; last as l; odd as o; even as e">
+    {{i}}-{{color}}; first-{{f}}; last-{{l}}; odd-{{o}}; even-{{e}}
+    <span *ngIf="!l">,</span>
+    <span *ngIf="l">.</span>
+  </div>
+  <h2>
+    {{parentname}} -> Component Interaction (Parent to Child)
+  </h2>
+  <button (click)="fireEvent()">Send Event</button>
+  <p>{{ pipe | json }}</p>
+  {{ name | uppercase }}
+  <p>{{ "hello world" | titlecase }}</p>
+  <p>{{ "hello world" | slice:1:4 }} -> including 1 and excluding 4</p>
+  <p>{{ 55.678 | number:'1.2-3' }} -> min value in digits place. min val in decimal place - max val in decimal place</p>
+  <p>{{ 55.678 | number:'3.4-5' }}</p>
+  <p>{{ 0.25 | percent }}</p>
+  <p>{{ 25 | currency:'GBP' }}</p>
+  <p>{{ 25 | currency:'GBP': 'code' }}</p>
+  <p>{{ date }}</p>
+  <p>{{ date | date:'short' }}</p>
+  <p>{{ date | date:'shortDate' }}</p>
+  <p>{{ date | date:'shortTime' }}</p>
+</div>

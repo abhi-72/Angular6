@@ -1,0 +1,10 @@
+<div style="text-align:center">
+  <h3>User login
+  <span *ngIf="message"> - {{message}}</span><br>
+  <input [(ngModel)]="auth.username" placeholder="username"><br>
+  <input [(ngModel)]="auth.password" type="password" placeholder="password"><br>
+  <button (click)="authenticateUser()">Log in</button><br><br>
+</h3>
+  <a routerLink="/register"><h4>Create an acount</h4></a><br><br>
+
+</div>

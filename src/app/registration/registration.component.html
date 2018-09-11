@@ -1,0 +1,9 @@
+<div style="text-align:center">
+  Create User
+  <span *ngIf="message"> - {{message}}</span><br>
+  <br>
+  <input [(ngModel)]="register.username" placeholder="username" value="durga"><br>
+  <input [(ngModel)]="register.password" type="password" placeholder="password" value="dddd"><br>
+  <input [(ngModel)]="register.email" placeholder="email" value="dafdads"><br>
+  <button (click)="registerUser()">Save</button>
+</div>

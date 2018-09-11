@@ -1,0 +1,8 @@
+<div style="text-align:right">
+    <button (click)="logoutUser()">Log out</button><br><br>
+</div>
+<app-userinformation></app-userinformation>
+<a [routerLink]="['/test']">test</a>
+<app-test (childname)="message=$event" [parentname]="name"></app-test>
+<p>{{message}}</p>
+

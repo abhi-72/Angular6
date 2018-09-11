@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center;">
+  <br>User Information<br>
+  <!-- <pre>Data Obtained is: {{ userdata | json }}</pre> -->
+  <button (click)="getUser()">Get all users</button>
+  <table *ngIf="userdata">
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>email</th>
+    </tr>
+    <tr *ngFor="let user of userdata">
+      <td>{{user.id}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+    </tr>
+  </table>
+</div>
