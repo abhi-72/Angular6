@@ -1,12 +1,12 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { RegistrationComponent } from './registration/registration.component';
-import { UserinformationComponent } from './home/userinformation/userinformation.component';
-import { HomeComponent } from './home/home.component';
-import { AuthenticationComponent } from './authentication/authentication.component';
+import { RegistrationComponent } from './Components/registration/registration.component';
+import { UserinformationComponent } from './Components/home/userinformation/userinformation.component';
+import { HomeComponent } from './Components/home/home.component';
+import { AuthenticationComponent } from './Components/authentication/authentication.component';
 //import { RouterModule } from '@angular/router';
-import { TestComponent } from './home/test/test.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TestComponent } from './Components/home/test/test.component';
+import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
     //{ path:'', redirectTo:'/home', pathMatch:'full' },

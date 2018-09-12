@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from './home.service';
+import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,11 +10,11 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   public name = "Abhi";
   public message;
-  constructor(private homeservice :HomeService, private route: Router) { }
+  constructor(private userservice :UserService, private route: Router) { }
   ngOnInit() {
   }
   logoutUser(){
-    this.homeservice.logoutUser().subscribe(
+    this.userservice.logoutUser().subscribe(
     response => {
       if (response.error == undefined){
       this.message = response.message

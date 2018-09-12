@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { UserinformationService } from './userinformation.service';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-userinformation',
   templateUrl: './userinformation.component.html',
   styleUrls: ['./userinformation.component.css'],
-  providers:[UserinformationService]
+  providers:[UserService]
 })
 
 export class UserinformationComponent implements OnInit {
   userdata;
-  constructor(private userinfo: UserinformationService) { }
+  constructor(private userinfo: UserService) { }
   ngOnInit() {
   }
   getUser(){

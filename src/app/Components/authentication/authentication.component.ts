@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from './authentication.service';
+import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-authentication',
   templateUrl: './authentication.component.html',
   styleUrls: ['./authentication.component.css'],
-  providers:[AuthenticationService]
+  providers:[UserService]
 })
 export class AuthenticationComponent implements OnInit {
-  constructor(private authservice :AuthenticationService, private route: Router) {}
+  constructor(private authservice :UserService, private route: Router) {}
     message;
     auth;
   ngOnInit() {

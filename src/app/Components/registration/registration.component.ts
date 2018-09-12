@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-//import { UserService } from '../user.service';
-import { RegistrationService } from './registration.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css'],
-  providers:[RegistrationService]
+  providers:[UserService]
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private registrationService:RegistrationService) { }
+  constructor(private userService:UserService) { }
   message;
   register;
   ngOnInit() {
@@ -23,7 +22,7 @@ export class RegistrationComponent implements OnInit {
     };
   }
   registerUser(){
-    this.registrationService.registerUser(this.register).subscribe(
+    this.userService.registerUser(this.register).subscribe(
     response => {
       this.message = 'User '+this.register.username+' has been created'
     },

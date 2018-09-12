@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from './user.service';
+import { UserService } from './services/user.service';
 //import {Router} from '@angular/router';
 //import {ApiService} from '../api.service';
 //import {CustomerService} from '../customer.service';
@@ -12,7 +12,7 @@ import { UserService } from './user.service';
 })
 
 export class AppComponent implements OnInit{
-  constructor(){
+  constructor(private service :UserService){
   }
   ngOnInit(){
   }

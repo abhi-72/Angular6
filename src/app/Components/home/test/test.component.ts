@@ -5,7 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   selector: 'app-test',
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css'],
-  //providers:[RegistrationService]
+  //providers:[UserService]
 })
 export class TestComponent implements OnInit {
   public name = 'Abhi';

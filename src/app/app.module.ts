@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule,routingComponents } from './app-routing.module';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { UserdetailComponent } from './home/userinformation/userdetail/userdetail.component';
+import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
+import { UserdetailComponent } from './Components/home/userinformation/userdetail/userdetail.component';
 
 
 @NgModule({
