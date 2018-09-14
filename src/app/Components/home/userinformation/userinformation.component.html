@@ -6,13 +6,13 @@
   <table *ngIf="userdata">
     <tr>
       <th>ID</th>
-      <th>Username</th>
-      <th>email</th>
+      <th>Name</th>
+      <th>mobile</th>
     </tr>
     <tr *ngFor="let user of userdata">
       <td>{{user.id}}</td>
-      <td>{{user.username}}</td>
-      <td>{{user.email}}</td>
+      <td>{{user.display_name}}</td>
+      <td>{{user.mobile}}</td>
     </tr>
   </table>
 </div>

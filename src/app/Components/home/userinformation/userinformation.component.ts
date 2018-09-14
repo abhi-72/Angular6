@@ -16,8 +16,8 @@ export class UserinformationComponent implements OnInit {
   getUser(){
     this.userinfo.getUser().subscribe(
      data => {
-      console.log(this.userdata)
-      this.userdata = data //as string[];
+      this.userdata = data 
+      console.log(this.userdata)//as string[];
     }
   );
   }

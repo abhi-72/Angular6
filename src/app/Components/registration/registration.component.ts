@@ -18,7 +18,7 @@ export class RegistrationComponent implements OnInit {
       password: '',
       email: '',
       mobile:'',
-      occupation:'',
+      name:'',
     };
   }
   registerUser(){

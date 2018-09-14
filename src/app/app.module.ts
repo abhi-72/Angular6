@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { UserdetailComponent } from './Components/home/userinformation/userdetail/userdetail.component';
+import { FileUploadComponent } from './Components/file-upload/file-upload.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UserdetailComponent } from './Components/home/userinformation/userdetai
     AppComponent,
     routingComponents,
     PageNotFoundComponent,
-    UserdetailComponent
+    UserdetailComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
