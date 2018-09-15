@@ -23,12 +23,10 @@ export class AuthenticationComponent implements OnInit {
     response => {
       if (response.error == undefined){
       this.message = response.message
-      console.log(this.message)
       this.route.navigate(['/home'])
       }
       if (response.error != undefined){
         this.message = response.error.message
-        console.log(this.message)
       }
     },
     error => {

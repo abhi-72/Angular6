@@ -24,7 +24,7 @@ export class RegistrationComponent implements OnInit {
   registerUser(){
     this.userService.registerUser(this.register).subscribe(
     response => {
-      this.message = 'User '+this.register.username+' has been created'
+      this.message = response.error.message//this.register.username+' has been created'
     },
     error => {
       var message = ""
@@ -33,9 +33,10 @@ export class RegistrationComponent implements OnInit {
           message += error.error[item]+" ,"
         }
       }
-      var comindex = message.lastIndexOf(",")
-      console.log(message.substr(0, comindex))
-      this.message = message.substr(0, comindex) 
+      if (message.includes(',')){
+        var comindex = message.lastIndexOf(",")
+        this.message = message.substr(0, comindex)
+      } 
     }
     );
   }

@@ -25,10 +25,18 @@ export class UserService {
   logoutUser(): Observable<any>{
     return this.http.get('http://127.0.0.1:8000/api/logout/')
   }
-
-  onUpload(selectedFile): Observable<any>{
+  
+  fileUpload(myfiles:Array<File>): Observable<any>{
+    //fileUpload(myfiles:File): Observable<any>{
     const uploadData = new FormData();
-    uploadData.append('myfile', selectedFile, selectedFile.name);
+    for (let i = 0; i < myfiles.length; i++){
+      uploadData.append('myfiles',myfiles[i],myfiles[i].name)
+    }
+    //uploadData.append('myfiles', myfiles, myfiles.name);
     return this.http.post('http://127.0.0.1:8000/api/fileUpload/', uploadData)
+  }
+  
+  fileDelete(userData): Observable<any>{
+    return this.http.post('http://127.0.0.1:8000/api/fileDelete/', userData)
   }
 }

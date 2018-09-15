@@ -1,6 +1,8 @@
-<input 
-  style="display: none" 
-  type="file" (change)="onFileChanged($event)" 
-  #fileInput>
+<div >
+    <img *ngFor="let url of myfilesDisplay" [src]="url" class="rounded mb-3" width="180" style="margin: 05px;">
+</div>
+<input style="display: none" type="file" #fileInput (change)="onFileChanged($event)" multiple />
 <button (click)="fileInput.click()">Select File</button>
-<button (click)="onUpload()">Upload!</button>
+<button (click)="onUpload()">Upload!</button><span>{{files_count}}</span><br>
+<p *ngIf="message">{{message}}</p> -->
+<!-- <p *ngIf="message" [(ngModel)]="message" ng-init="message">{{message}}</p> -->

@@ -18,12 +18,10 @@ export class HomeComponent implements OnInit {
     response => {
       if (response.error == undefined){
       this.message = response.message
-      console.log(this.message)
       this.route.navigate(['/login'])
       }
       if (response.error != undefined){
         this.message = response.error.message
-        console.log(this.message)
       }
     },
     error => {

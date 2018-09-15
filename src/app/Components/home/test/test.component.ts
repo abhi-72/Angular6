@@ -18,7 +18,7 @@ export class TestComponent implements OnInit {
   public color = "blue";
   public colors = ["blue","red","green","black","yellow"];
   public date = new Date();
-  // public twoWayBind = "dsadsa";
+  public twoWayBind = "dsadsa";
   
   @Input() 
   public parentname; 
