@@ -28,12 +28,13 @@ export class UserService {
   
   fileUpload(myfiles:Array<File>): Observable<any>{
     //fileUpload(myfiles:File): Observable<any>{
+      const headers = new HttpHeaders().set("X-CSRFToken", "");
     const uploadData = new FormData();
     for (let i = 0; i < myfiles.length; i++){
       uploadData.append('myfiles',myfiles[i],myfiles[i].name)
     }
     //uploadData.append('myfiles', myfiles, myfiles.name);
-    return this.http.post('http://127.0.0.1:8000/api/fileUpload/', uploadData)
+    return this.http.post('http://127.0.0.1:8000/api/fileUpload/', uploadData, {headers})
   }
   
   fileDelete(userData): Observable<any>{

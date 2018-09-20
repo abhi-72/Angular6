@@ -2,7 +2,8 @@
   Create User
   <span *ngIf="message"> - {{message}}</span><br>
   <br>
-  <input [(ngModel)]="register.username" placeholder="username"><br>
+  <input [ngModel]="register.username" placeholder="username"
+    (ngModelChange)="validateUsername($event)">{{validate_username}}<br>
   <input [(ngModel)]="register.password" type="password" placeholder="password"><br>
   <input [(ngModel)]="register.name"  placeholder="name"><br>
   <input [(ngModel)]="register.mobile" placeholder="mobile"><br>
